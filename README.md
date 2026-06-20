@@ -3,11 +3,11 @@ Python pipeline that automatically extracts structured candidate information fro
 By leveraging LangChain and the DeepSeek-Chat model, the project transforms raw resume text into strictly typed data objects before committing them to a relational database.
 
 Key Features
-Multi-Format Document Parsing: Automatically detects and extracts raw text from both .pdf and .docx files using custom LangChain document loaders.
-Structured AI Extraction: Utilizes DeepSeek LLM constrained by a strict Pydantic schema (PersonInfo) to guarantee consistent JSON-like outputs without model hallucinations.
-Streamlined LCEL Chain: Implements LangChain Expression Language (prompt | structured_ai_agent) for clean, declarative data flow management.
-Secure Database Storage: Persists data to a local SQLite database using parameterized queries to eliminate the risk of SQL injection and format exceptions.
-Graceful Error Handling: Wrapped in robust try/except blocks to ensure the pipeline continues processing even if a single document is corrupted or unreadable.
+Multi-Format Parsing: Automatically extracts text from both PDF and DOCX files using custom LangChain loaders.
+Structured AI Extraction: Uses DeepSeek LLM with a strict Pydantic schema (PersonInfo) for consistent, hallucination-free JSON outputs.
+Streamlined LCEL Chain: Clean, declarative pipeline built with LangChain Expression Language.
+Secure Storage: Saves data to local SQLite using parameterized queries to prevent SQL injection.
+Robust Error Handling: Graceful try/except blocks ensure the pipeline continues even with corrupted files.
 
 Tech Stack
 Language: Python 3.13+
